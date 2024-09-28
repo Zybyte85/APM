@@ -7,4 +7,7 @@ In your terminal, simply just run "apm install (thing to install)" or you can re
 
 ## Installation
 
-Just download the binary in the latest release and move it to either ~/.local/bin for user installation or usr/bin for global installation.
+Just download the binary in the latest release and move it to either ~/.local/bin for user installation or usr/bin for global installation. Or you can run this:
+```bash
+wget https://github.com/Zybyte85/APM/releases/latest/download/apm -P ~/.local/bin && chmod +x ~/.local/bin/apm
+```
