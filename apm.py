@@ -11,7 +11,7 @@ def _get_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(
         prog="apm",
-        epilog="Please report bugs at [insert github link here]",
+        epilog="Please report bugs at https://github.com/Zybyte85/APM",
     )
 
     subparsers = parser.add_subparsers(dest="command")
@@ -39,7 +39,9 @@ def main():
     parser = _get_parser()
     args = parser.parse_args()
 
-    if args.command == "install":
+    if not args.command:
+        parser.print_help()
+    elif args.command == "install":
         funcs.install(args.app_name)
     elif args.command == "remove":
         funcs.remove(args.app_name)
